@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    /* Style the form container */
+    .form-container {
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    /* Style the form input fields and button */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+    }
+
+    /* Style the form error message */
+    .error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login Form</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+
+      
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
